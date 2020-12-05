@@ -1,0 +1,14 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+header {
+	display: none;
+}
+
+header, section, footer {
+	float: none;
+	position: static;
+	width: auto;
+}
