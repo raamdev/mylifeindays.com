@@ -24,9 +24,9 @@ What could you do for 15 minutes every day for the next year that would make you
 
 One percent. Can you dedicate one percent to that activity?
 
-- 30 minutes = 2% of your day.
-- 45 minutes = 3% of your day.
-- 1 hour = 4% of your day.
+- 30 minutes = 2% of a day.
+- 45 minutes = 3% of a day.
+- 1 hour = 4% of a day.
 
 You probably spend 30% of each day sleeping.
 
