@@ -4,11 +4,10 @@
 @import "{{ site.theme }}";
 
 header {
-	padding-right: 320px;
+	padding-right: 320px !important;
 }
 header, section, footer {
-	padding-right: 320px;
-	float: none;
-	position: static;
-	width: auto;
+	float: none !important;
+	position: static !important;
+	width: auto !important;
 }
