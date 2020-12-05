@@ -1,0 +1,14 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+header {
+	padding-right: 320px;
+}
+header, section, footer {
+	padding-right: 320px;
+	float: none;
+	position: static;
+	width: auto;
+}
