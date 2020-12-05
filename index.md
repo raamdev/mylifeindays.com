@@ -1,4 +1,4 @@
-![Graphic of all the days in a 90-year human life](https://raamdev.com/wordpress/wp-content/uploads/2017/09/all-the-days-in-a-90-year-human-life.jpg)
+![Graphic of all the days in a 90-year human life](all-the-days-in-a-90-year-human-life.jpg)
 
 We experience life in days, not hours, weeks, months, or years.
 
