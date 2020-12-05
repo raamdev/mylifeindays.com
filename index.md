@@ -1,37 +1,41 @@
-## Welcome to GitHub Pages
+![Graphic of all the days in a 90-year human life](https://raamdev.com/wordpress/wp-content/uploads/2017/09/all-the-days-in-a-90-year-human-life.jpg)
 
-You can use the [editor on GitHub](https://github.com/raamdev/mylifeindays.com/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+We experience life in days, not hours, weeks, months, or years.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Each day is a story, a miniature version of a human life: it contains a beginning, a middle, and an end.
 
-### Markdown
+Each day is an opportunity to rewrite, an opportunity to start telling a new story. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Or if we're already building a great story, it's an opportunity to build upon the previous chapter, to do something surprising.
 
-```markdown
-Syntax highlighted code block
+Life is short, yes, but it's also full of unscripted potential.
 
-# Header 1
-## Header 2
-### Header 3
+[Yuri Gagarin](https://en.wikipedia.org/wiki/Yuri_Gagarin), over the course of 20 years, went from living in a mud hut to becoming the first human to journey into outer space.
 
-- Bulleted
-- List
+What else is possible? (link to contact form)
 
-1. Numbered
-2. List
+## 1% of 1 day
 
-**Bold** and _Italic_ and `Code` text
+If it's too overwhelming to think of all the days in your life, how about just 1% of one day?
 
-[Link](url) and ![Image](src)
-```
+15 minutes = 1% of a day.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+What could you do for 15 minutes every day for the next year that would make your life better?
 
-### Jekyll Themes
+One percent. Can you dedicate one percent to that activity?
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/raamdev/mylifeindays.com/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+- 30 minutes = 2% of your day.
+- 45 minutes = 3% of your day.
+- 1 hour = 4% of your day.
 
-### Support or Contact
+You probably spend 24-32% of each day sleeping.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+What are you doing with the other 70%?
+
+## Who made this?
+
+Hey there! My name is [Raam Dev](https://raamdev.com/about/). 
+
+By day I make the web a better place as a software engineer at [Automattic](https://automattic.com/). 
+
+By night I write on [raamdev.com](https://raamdev.com/). Say hello [@raamdev](https://twitter.com/raamdev).
