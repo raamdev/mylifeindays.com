@@ -12,7 +12,7 @@ Life is short, yes, but it's also full of unscripted potential.
 
 [Yuri Gagarin](https://en.wikipedia.org/wiki/Yuri_Gagarin), over the course of 20 years, went from living in a mud hut to becoming the first human to journey to outer space.
 
-What else is possible?
+What else is possible??
 
 ## 1% of 1 day
 
