@@ -3,6 +3,75 @@
 
 @import "{{ site.theme }}";
 
+// Light is the default; dark applies when the system asks for it (unless the
+// toggle picked light) or when the toggle picked dark.
+:root {
+	--bg: #fff;
+	--text: #727272;
+	--heading: #222;
+	--link: #267cb9;
+	--link-hover: #069;
+	--rule: #e5e5e5;
+	--accent: #0b5aa2;
+	--control-bg: #fff;
+	--control-border: #bbb;
+	--dot-future: #111;
+	--dot-past: #0b5aa2;
+	--dot-today: #e8412c;
+	--tip-bg: #222;
+	--tip-text: #fff;
+}
+
+@mixin dark {
+	color-scheme: dark;
+	--bg: #15171a;
+	--text: #a3a9b0;
+	--heading: #eceef0;
+	--link: #6cb4f0;
+	--link-hover: #9ccdf6;
+	--rule: #2c3036;
+	--accent: #5aa7ea;
+	--control-bg: #22262b;
+	--control-border: #444a52;
+	--dot-future: #c9cdd2;
+	--dot-past: #3f8fd8;
+	--dot-today: #ff6a52;
+	--tip-bg: #eceef0;
+	--tip-text: #15171a;
+
+	.icon-moon { display: none; }
+	.icon-sun { display: block; }
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme="light"]) {
+		@include dark;
+	}
+}
+:root[data-theme="dark"] {
+	@include dark;
+}
+
+body {
+	background-color: var(--bg);
+	color: var(--text);
+}
+h1, h2, h3, h4, h5, h6, strong {
+	color: var(--heading);
+}
+a {
+	color: var(--link);
+}
+a:hover, a:focus {
+	color: var(--link-hover);
+}
+hr {
+	background: var(--rule);
+}
+blockquote, section {
+	border-color: var(--rule);
+}
+
 header {
 	display: none;
 }
@@ -11,4 +80,135 @@ header, section, footer {
 	float: none;
 	position: static;
 	width: auto;
+}
+
+.theme-toggle {
+	position: fixed;
+	top: 12px;
+	right: 12px;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	border: 1px solid var(--control-border);
+	border-radius: 50%;
+	background: var(--control-bg);
+	color: var(--heading);
+	cursor: pointer;
+}
+.icon-sun {
+	display: none;
+}
+
+.life {
+	margin-bottom: 2.5em;
+}
+.life-title {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	color: var(--accent);
+	text-align: center;
+	font-size: clamp(1.4rem, 5vw, 2.6rem);
+	line-height: 1.15;
+	margin: 0 0 0.2em;
+}
+.life-subtitle {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	color: var(--accent);
+	text-align: center;
+	font-size: clamp(0.95rem, 2.6vw, 1.35rem);
+	margin: 0 0 1.2em;
+}
+.life-form {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 0.6em;
+	margin-bottom: 0.6em;
+
+	label {
+		font-weight: 700;
+		color: var(--heading);
+	}
+	input, button {
+		font: inherit;
+		padding: 0.3em 0.6em;
+		border: 1px solid var(--control-border);
+		border-radius: 4px;
+		background: var(--control-bg);
+		color: var(--heading);
+	}
+	button {
+		cursor: pointer;
+	}
+}
+.life-stats {
+	text-align: center;
+	min-height: 1.6em;
+	margin: 0 0 1.2em;
+
+	strong {
+		color: var(--accent);
+	}
+}
+.life-chart {
+	position: relative;
+	width: 100%;
+
+	canvas {
+		display: block;
+		width: 100%;
+		touch-action: manipulation;
+		cursor: crosshair;
+	}
+}
+.life-ring {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	border: 2px solid var(--dot-today);
+	border-radius: 50%;
+	pointer-events: none;
+}
+.life-today {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	border: 2px solid var(--dot-today);
+	border-radius: 50%;
+	pointer-events: none;
+	animation: life-pulse 1.6s ease-out infinite;
+}
+@keyframes life-pulse {
+	0% { opacity: 1; transform: translate(-50%, -50%) scale(0.6); }
+	100% { opacity: 0; transform: translate(-50%, -50%) scale(1.6); }
+}
+@media (prefers-reduced-motion: reduce) {
+	.life-today { animation: none; }
+}
+.life-tip {
+	position: absolute;
+	transform: translate(-50%, -100%);
+	margin-top: -6px;
+	padding: 0.35em 0.6em;
+	background: var(--tip-bg);
+	color: var(--tip-text);
+	font-size: 13px;
+	line-height: 1.4;
+	white-space: nowrap;
+	border-radius: 4px;
+	pointer-events: none;
+}
+.life-credit {
+	text-align: right;
+	font-weight: 700;
+	font-size: 0.85em;
+	margin-top: 0.8em;
+
+	a {
+		color: var(--heading);
+	}
 }

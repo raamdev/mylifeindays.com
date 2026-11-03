@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <script>
+      // Apply a saved light/dark choice before the page paints; without one, CSS follows the system.
+      try {
+        var theme = localStorage.getItem('mylifeindays-theme');
+        if (theme === 'light' || theme === 'dark') document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    </script>
 
 {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
@@ -12,16 +20,20 @@
     <![endif]-->
   </head>
   <body>
+    <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch between light and dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 1.5v2.5M12 20v2.5M1.5 12H4M20 12h2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></g></svg>
+    </button>
     <div class="wrapper">
       <header>
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-        
+
         {% if site.logo %}
           <img src="{{site.logo | relative_url}}" alt="Logo" />
         {% endif %}
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
-        
+
       </header>
       <section>
 
@@ -31,6 +43,22 @@
       <footer>
       </footer>
     </div>
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var system = window.matchMedia('(prefers-color-scheme: dark)');
+        function current() { return root.getAttribute('data-theme') || (system.matches ? 'dark' : 'light'); }
+        document.getElementById('theme-toggle').addEventListener('click', function () {
+          var next = current() === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          try {
+            // Picking the system's own mode goes back to following the system.
+            if (next === (system.matches ? 'dark' : 'light')) localStorage.removeItem('mylifeindays-theme');
+            else localStorage.setItem('mylifeindays-theme', next);
+          } catch (e) {}
+        });
+      })();
+    </script>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
   </body>
 </html>
