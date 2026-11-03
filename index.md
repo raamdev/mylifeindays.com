@@ -37,6 +37,23 @@ If it's too overwhelming to think of all the days in your life, how about just 1
 
 15 minutes = 1% of a day.
 
+<div class="day">
+  <p class="day-title">One day = 96 blocks of 15 minutes</p>
+  <div class="day-grid" id="day-grid" role="img" aria-label="96 dots, one for every 15 minutes in a day, with 32 of them marking 8 hours of sleep"></div>
+  <div class="day-legend">
+    <span><i class="day-dot is-sleep"></i> 8 hours asleep</span>
+    <span><i class="day-dot is-on"></i> Your time</span>
+  </div>
+  <div class="day-options" id="day-options" role="group" aria-label="Time per day">
+    <button type="button" data-minutes="15">15 min</button>
+    <button type="button" data-minutes="30">30 min</button>
+    <button type="button" data-minutes="45">45 min</button>
+    <button type="button" data-minutes="60">1 hour</button>
+  </div>
+  <p class="day-stats" id="day-stats" aria-live="polite"></p>
+</div>
+<script src="assets/js/day.js" defer></script>
+
 What could you do for 15 minutes every day for the next year that would make your life better?
 
 One percent. Can you dedicate one percent to that activity?
